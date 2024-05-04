@@ -9,6 +9,7 @@
         var link = this.href;
         window.location.href = link;
         setTimeout(function() {
+            document.getElementById("youtubeText").innerText = "Follow us on Youtube ✅";
             grantXPAndUpdateText("youtubeText");
         }, 5000);
     });
