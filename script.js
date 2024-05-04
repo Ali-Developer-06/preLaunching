@@ -11,7 +11,7 @@
         setTimeout(function() {
             document.getElementById("youtubeText").innerText = "Follow us on Youtube ✅";
             grantXPAndUpdateText("youtubeText");
-        }, 5000);
+        }, 30000);
     });
 
     document.getElementById("twitterIcon").addEventListener("click", function(event) {
@@ -21,7 +21,7 @@
         setTimeout(function() {
             document.getElementById("twitterText").innerText = "Follow us on Twitter ✅";
             grantXPAndUpdateText("twitterText");
-        }, 5000);
+        }, 30000);
     });
 
     document.getElementById("whatsappIcon").addEventListener("click", function(event) {
@@ -31,7 +31,7 @@
         setTimeout(function() {
             document.getElementById("whatsappText").innerText = "Follow us on Whatsapp ✅";
             grantXPAndUpdateText("whatsappText");
-        }, 5000);
+        }, 30000);
     });
 
     document.getElementById("telegramIcon").addEventListener("click", function(event) {
@@ -41,7 +41,7 @@
         setTimeout(function() {
             document.getElementById("telegramText").innerText = "Follow us on Telegram ✅";
             grantXPAndUpdateText("telegramText");
-        }, 5000);
+        }, 30000);
     });
     document.getElementById("instagramIcon").addEventListener("click", function(event) {
         event.preventDefault();
@@ -50,15 +50,5 @@
         setTimeout(function() {
             document.getElementById("instagramText").innerText = "Follow us on Telegram ✅";
             grantXPAndUpdateText("instagramText");
-        }, 5000);
-    });
-
-    var btn = document.getElementById("openPopup");
-    var popup = document.getElementById("popup");
-    var closeBtn = popup.querySelector(".popup-close");
-    btn.addEventListener("click", function() {
-        popup.style.display = "block";
-    });
-    closeBtn.addEventListener("click", function() {
-        popup.style.display = "none";
+        }, 30000);
     });
