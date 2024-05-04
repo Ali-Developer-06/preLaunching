@@ -58,32 +58,12 @@
         }, 5000);
     });
 
-    document.getElementById('image-input').addEventListener('change', function(event) {
-        var input = event.target;
-        var files = input.files;
-        var selectedImagesDiv = document.getElementById('selected-images');
-        
-        // Iterate over selected files
-        for (var i = 0; i < files.length; i++) {
-        var reader = new FileReader();
-        reader.onload = (function(file) {
-            return function(e) {
-                var img = new Image();
-                img.src = e.target.result;
-                img.onload = function() {
-                var canvas = document.createElement('canvas');
-                var ctx = canvas.getContext('2d');
-                canvas.width = 50;
-                canvas.height = 50;
-                ctx.drawImage(img, 0, 0, 50, 50);
-                var imgElement = document.createElement('img');
-                imgElement.src = canvas.toDataURL();
-                selectedImagesDiv.appendChild(imgElement);
-                };
-            };
-            })(files[i]);
-            reader.readAsDataURL(files[i]);
-        }
-        // Clear the input value to allow selecting the same images again
-        input.value = '';
+    var btn = document.getElementById("openPopup");
+    var popup = document.getElementById("popup");
+    var closeBtn = popup.querySelector(".popup-close");
+    btn.addEventListener("click", function() {
+        popup.style.display = "block";
+    });
+    closeBtn.addEventListener("click", function() {
+        popup.style.display = "none";
     });
